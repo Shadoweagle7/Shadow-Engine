@@ -1,3 +1,5 @@
+#include "se-pch.h"
+
 #ifndef SE_EVENT
 #define SE_EVENT
 
@@ -54,22 +56,22 @@ virtual int get_category_flags() const override { return category; }
 	public:
 		template<
 			class T,
-			std::enable_if<
+			std::enable_if_t<
 				std::disjunction_v<
-					std::is_same_v<event, T>,
-					std::is_base_of_v<event, T>
+					std::is_same<event, T>,
+					std::is_base_of<event, T>
 				>,
 				int
 			> = 0
 		>
-		using event_func = std::function<bool(T &)>;
+		using event_func_t = std::function<bool(T &)>;
 	private:
 		event &e;
 	public:
 		event_dispatcher(event &e) : e(e) {}
 
 		template<class T>
-		bool dispatch(event_func<T> func) {
+		bool dispatch(event_func_t<T> func) {
 			if (e.get_event_type() == T::get_static_type()) {
 				e.handled = func(*(T *)&this->e);
 				return true;

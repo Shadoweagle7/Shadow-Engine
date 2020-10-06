@@ -38,6 +38,8 @@
     </ClInclude>
     <ClInclude Include="src\se-pch.h" />
     <ClInclude Include="src\shadow-engine.h" />
+    <ClInclude Include="src\Shadow-Engine\window.h" />
+    <ClInclude Include="src\platform\windows\windows_window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Shadow-Engine\application.cpp">
@@ -47,5 +49,6 @@
       <Filter>Shadow-Engine</Filter>
     </ClCompile>
     <ClCompile Include="src\se-pch.cpp" />
+    <ClCompile Include="src\platform\windows\windows_window.cpp" />
   </ItemGroup>
 </Project>

@@ -1,3 +1,5 @@
+#include "se-pch.h"
+
 #ifndef SE_APPLICATION_EVENT
 #define SE_APPLICATION_EVENT
 

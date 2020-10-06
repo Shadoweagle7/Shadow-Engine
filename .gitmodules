@@ -1,3 +1,6 @@
 [submodule "Shadow-Engine/Shadow-Engine/vendor/spdlog"]
 	path = Shadow-Engine/Shadow-Engine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Shadow-Engine/Shadow-Engine/vendor/GLFW"]
+	path = Shadow-Engine/Shadow-Engine/vendor/GLFW
+	url = https://github.com/Shadoweagle7/glfw

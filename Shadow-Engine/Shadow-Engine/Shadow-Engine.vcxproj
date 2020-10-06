@@ -149,6 +149,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\platform\windows\windows_window.h" />
     <ClInclude Include="src\Shadow-Engine\application.h" />
     <ClInclude Include="src\Shadow-Engine\core.h" />
     <ClInclude Include="src\Shadow-Engine\entrypoint.h" />
@@ -160,8 +161,10 @@
     <ClInclude Include="src\Shadow-Engine\log.h" />
     <ClInclude Include="src\se-pch.h" />
     <ClInclude Include="src\shadow-engine.h" />
+    <ClInclude Include="src\Shadow-Engine\window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\platform\windows\windows_window.cpp" />
     <ClCompile Include="src\Shadow-Engine\application.cpp" />
     <ClCompile Include="src\Shadow-Engine\log.cpp" />
     <ClCompile Include="src\se-pch.cpp">
