@@ -4,6 +4,9 @@
     <Filter Include="Shadow-Engine">
       <UniqueIdentifier>{EE1C6BAD-5ADD-E6E3-2318-30618F972BC0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shadow-Engine\events">
+      <UniqueIdentifier>{3245A2F5-1ED4-2BBF-C7F2-3FBAB3603C65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Shadow-Engine\application.h">
@@ -15,9 +18,25 @@
     <ClInclude Include="src\Shadow-Engine\entrypoint.h">
       <Filter>Shadow-Engine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Shadow-Engine\events\application_event.h">
+      <Filter>Shadow-Engine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow-Engine\events\event.h">
+      <Filter>Shadow-Engine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow-Engine\events\key_event.h">
+      <Filter>Shadow-Engine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow-Engine\events\mouse_event.h">
+      <Filter>Shadow-Engine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow-Engine\events\touch_event.h">
+      <Filter>Shadow-Engine\events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Shadow-Engine\log.h">
       <Filter>Shadow-Engine</Filter>
     </ClInclude>
+    <ClInclude Include="src\se-pch.h" />
     <ClInclude Include="src\shadow-engine.h" />
   </ItemGroup>
   <ItemGroup>
@@ -27,5 +46,6 @@
     <ClCompile Include="src\Shadow-Engine\log.cpp">
       <Filter>Shadow-Engine</Filter>
     </ClCompile>
+    <ClCompile Include="src\se-pch.cpp" />
   </ItemGroup>
 </Project>

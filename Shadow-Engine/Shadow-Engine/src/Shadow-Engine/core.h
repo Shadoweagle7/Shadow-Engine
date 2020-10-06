@@ -13,4 +13,6 @@
 #error Shadow Engine only supports Windows
 #endif // SE_PLATFORM_WINDOWS
 
+#define CREATE_BIT_FLAG(x) (1 << x)
+
 #endif // !SE_CORE

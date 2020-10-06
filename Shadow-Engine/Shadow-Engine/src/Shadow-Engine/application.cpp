@@ -1,3 +1,4 @@
+#include "se-pch.h"
 #include "application.h"
 
 namespace shadow_engine {

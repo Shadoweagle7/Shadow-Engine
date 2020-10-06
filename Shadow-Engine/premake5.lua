@@ -9,6 +9,11 @@ workspace "Shadow-Engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Shadow-Engine/vendor/GLFW/include"
+
+include "Shadow-Engine/vendor/GLFW"
+
 project "Shadow-Engine"
 	location "Shadow-Engine"
 	kind "SharedLib"
@@ -17,13 +22,23 @@ project "Shadow-Engine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "se-pch.h"
+	pchsource "Shadow-Engine/src/se-pch.cpp"
+
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

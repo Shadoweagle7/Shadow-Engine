@@ -2,9 +2,8 @@
 #define SE_LOG
 
 #include "core.h"
-#include "spdlog\spdlog.h"
-
-#include <memory>
+#include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace shadow_engine {
 	class SE_API log {
