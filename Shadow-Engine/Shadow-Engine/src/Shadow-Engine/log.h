@@ -21,10 +21,6 @@ namespace shadow_engine {
 
 // Logging macros
 
-#ifdef _DEBUG
-#define SE_DEBUG _DEBUG
-#endif // _DEBUG
-
 #ifdef SE_DEBUG
 
 #define SE_CORE_TRACE(...)      ::shadow_engine::log::get_core_logger()->trace(__VA_ARGS__)
