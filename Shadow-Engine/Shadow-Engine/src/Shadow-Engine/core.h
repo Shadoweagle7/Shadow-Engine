@@ -9,9 +9,8 @@
 #define SE_API __declspec(dllimport)
 #endif // SE_BUILD_DLL
 
-#endif // SE_PLATFORM_WINDOWS
-
 #else
 #error Shadow Engine only supports Windows
+#endif // SE_PLATFORM_WINDOWS
 
 #endif // !SE_CORE

@@ -1,2 +1,6 @@
 ﻿  sandbox.cpp
+E:\Shadoweagle7\Programming\C++\Visual C++\Shadow Engine\Shadow-Engine\Shadow-Engine\Shadow-Engine\src\Shadow-Engine\log.h(12,53): warning C4251: 'shadow_engine::log::core_logger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'shadow_engine::log'
+E:\Shadoweagle7\Programming\C++\Visual C++\Shadow Engine\Shadow-Engine\Shadow-Engine\Shadow-Engine\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+E:\Shadoweagle7\Programming\C++\Visual C++\Shadow Engine\Shadow-Engine\Shadow-Engine\Shadow-Engine\src\Shadow-Engine\log.h(13,55): warning C4251: 'shadow_engine::log::client_logger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'shadow_engine::log'
+E:\Shadoweagle7\Programming\C++\Visual C++\Shadow Engine\Shadow-Engine\Shadow-Engine\Shadow-Engine\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
   Sandbox.vcxproj -> E:\Shadoweagle7\Programming\C++\Visual C++\Shadow Engine\Shadow-Engine\Shadow-Engine\bin\Debug-x64\Sandbox\Sandbox.exe
