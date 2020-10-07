@@ -3,13 +3,15 @@
 
 namespace shadow_engine {
 	application::application() {
-
+		this->application_window = std::unique_ptr<window>(window::create());
 	}
 
 	application::~application() {
 
 	}
 	void application::run() {
-		while (true);
+		while (this->running) {
+			this->application_window->on_update();
+		}
 	}
 }

@@ -20,7 +20,7 @@ namespace shadow_engine {
 		window_data_t window_data;
 
 		virtual void init(const window::properties &properties);
-		virtual void shutdown(const window::properties &properties);
+		virtual void shutdown();
 	public:
 		windows_window(const window::properties &properties);
 

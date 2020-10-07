@@ -56,6 +56,24 @@ namespace shadow_engine {
 
 #endif // SE_DEBUG
 
+#ifdef SE_DEBUG
+#define DEBUG_BREAK __debugbreak
+#endif // SE_DEBUG
+
+#define SE_ENABLE_ASSERTS SE_DEBUG
+
+#ifdef SE_ENABLE_ASSERTS
+
+#define SE_ASSERT(condition, ...)        { if (!condition) { SE_ERROR("Assertion Failed: {0}", __VA_ARGS__); DEBUG_BREAK(); } }
+#define SE_CORE_ASSERT(condition, ...)   { if (!condition) { SE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); DEBUG_BREAK(); } }
+
+#else
+
+#define SE_ASSERT(condition, ...)
+#define SE_CORE_ASSERT(condition, ...)
+
+#endif // SE_ENABLE_ASSERTS
+
 #endif // !SE_LOG
 
 

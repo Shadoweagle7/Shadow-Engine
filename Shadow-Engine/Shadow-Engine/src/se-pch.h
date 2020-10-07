@@ -21,8 +21,12 @@
 
 #include <chrono>
 
+#include <atomic>
+
 #ifdef SE_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif // SE_PLATFORM_WINDOWS
+
+#include "Shadow-Engine/log.h"
 
 #endif // !SE_PCH
