@@ -14,6 +14,8 @@ namespace shadow_engine {
 		virtual ~application();
 		
 		void run();
+
+		void on_event(event &e);
 	};
 
 	// Define in client

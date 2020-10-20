@@ -33,6 +33,8 @@ namespace shadow_engine {
 			this->window_data.event_callback = callback;
 		}
 
+		inline void set_event_callback(const window::event_callback_t &callback) { this->window_data.event_callback = callback; }
+
 		virtual void set_vsync(bool enabled);
 		virtual bool is_vsync() const;
 
