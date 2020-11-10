@@ -71,7 +71,50 @@ namespace shadow_engine {
 			windows_window::window_data_t &window_data = *static_cast<windows_window::window_data_t *>(glfwGetWindowUserPointer(window));
 
 			switch (action) {
+				case GLFW_PRESS:
+				{
+					key_pressed_event e(key, 0);
+					window_data.event_callback(e);
+					break;
+				}
+				case GLFW_RELEASE:
+				{
+					key_released_event e(key);
+					window_data.event_callback(e);
+					break;
+				}
+				case GLFW_REPEAT:
+				{
+					key_pressed_event e(key, 1); // GLFW doesn't have a detection method, but Win32 does.
+												 // TODO: Add the detection method for repeated key presses.
+					window_data.event_callback(e);
+					break;
+				}
 				default:
+					SE_CORE_CRITICAL("Unknown key press action. Check which graphics library is being used.");
+					break;
+			}
+		});
+
+		glfwSetMouseButtonCallback(this->internal_window, [](GLFWwindow *window, int button, int action, int mods) {
+			windows_window::window_data_t &window_data = *static_cast<windows_window::window_data_t *>(glfwGetWindowUserPointer(window));
+
+			switch (action) {
+				switch (action) {
+					case GLFW_PRESS:
+					{
+						mouse_button_pressed_event e(button);
+						window_data.event_callback(e);
+						break;
+					}
+					case GLFW_RELEASE:
+					{
+						mouse_button_released_event e(button);
+						window_data.event_callback(e);
+						break;
+					}
+				default:
+					SE_CORE_CRITICAL("Unknown mouse press action. Check which graphics library is being used.");
 					break;
 			}
 		});
